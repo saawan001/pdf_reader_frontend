@@ -1,0 +1,14 @@
+src/api.ts
+  h_8f13645cbdf3e5 69,88-89,137
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "613003f1cd1515094fac2b18a0585da75baee876",
+  "prompts": {},
+  "humans": {
+    "h_8f13645cbdf3e5": {
+      "author": "skumar3 <skumar3@cogitate.com>"
+    }
+  }
+}
