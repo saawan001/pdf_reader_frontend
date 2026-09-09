@@ -7,8 +7,8 @@ import "./App.css";
 
 
 import { ToastProvider } from "./components/Toast";
-import UploadPanel from "./components/Uploadpanel";
-import ChatPanel from "./components/Chatpanel";
+import UploadPanel from "./components/UploadPanel";
+import ChatPanel from "./components/ChatPanel";
 
 export default function App() {
   const [documents, setDocuments] = useState<DocumentInfo[]>([]);
