@@ -66,7 +66,7 @@ export async function deleteDocument(filename: string): Promise<void> {
 export async function askQuestion(question: string, filename?: string): Promise<AskResponse> {
   const res = await fetch(`${API_BASE}/documents/ask`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", "ngrok-skip-browser-warning": "true" },
     body: JSON.stringify({ question, filename }),
   });
 
@@ -85,7 +85,8 @@ export async function askQuestionStream(
 ): Promise<void> {
   const res = await fetch(`${API_BASE}/documents/ask/stream`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", 
+      "ngrok-skip-browser-warning": "true"},
     body: JSON.stringify({ question, filename }),
   });
 
@@ -133,7 +134,7 @@ export async function saveChatHistory(scopeKey: string, history: Exchange[]): Pr
   try {
     await fetch(`${API_BASE}/documents/history`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "ngrok-skip-browser-warning": "true" },
       body: JSON.stringify({ scope_key: scopeKey, history }),
     });
   } catch {
