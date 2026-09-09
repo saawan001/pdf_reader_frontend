@@ -1,0 +1,14 @@
+tsconfig.tsbuildinfo
+  h_8f13645cbdf3e5 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "f0d5679b242d6e21bd8339da2aab83336da0b0df",
+  "prompts": {},
+  "humans": {
+    "h_8f13645cbdf3e5": {
+      "author": "skumar3 <skumar3@cogitate.com>"
+    }
+  }
+}
