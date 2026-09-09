@@ -1,0 +1,18 @@
+.env
+  h_8f13645cbdf3e5 1
+src/api.ts
+  h_8f13645cbdf3e5 1
+src/vite-env.d.ts
+  h_8f13645cbdf3e5 1-9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "8a29b9d53ba474c901c830934baf87f349c85bc2",
+  "prompts": {},
+  "humans": {
+    "h_8f13645cbdf3e5": {
+      "author": "skumar3 <skumar3@cogitate.com>"
+    }
+  }
+}
