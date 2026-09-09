@@ -1,7 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
 import { listDocuments, DocumentInfo } from "./api";
-
-// @ts-expect-error App.css is handled by Vite bundler at runtime.
 import "./App.css";
 
 
