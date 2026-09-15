@@ -49,9 +49,11 @@ export default function UploadPanel({
   }, [documents, searchQuery]);
 
   async function handleFile(file: File) {
-    if (file.type !== "application/pdf") {
+    const ext = file.name.slice(file.name.lastIndexOf(".")).toLowerCase();
+    const allowed = [".pdf", ".txt", ".md", ".docx"];
+    if (!allowed.includes(ext)) {
       setStatus("error");
-      const msg = "Only PDF documents are supported currently.";
+      const msg = `Unsupported file format '${ext}'. Allowed formats: PDF, TXT, MD, DOCX`;
       setErrorMessage(msg);
       showToast(msg, "error");
       return;
@@ -139,7 +141,7 @@ export default function UploadPanel({
             <input
               ref={inputRef}
               type="file"
-              accept="application/pdf"
+              accept=".pdf,.txt,.md,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain,text/markdown"
               hidden
               onChange={(e) => {
                 const file = e.target.files?.[0];
@@ -162,7 +164,7 @@ export default function UploadPanel({
             ) : (
               <div>
                 <p className="dropzone__title">Upload Document</p>
-                <p className="dropzone__hint">Drag PDF here or click to browse</p>
+                <p className="dropzone__hint">Drag PDF, DOCX, TXT, MD here or browse</p>
               </div>
             )}
           </div>
